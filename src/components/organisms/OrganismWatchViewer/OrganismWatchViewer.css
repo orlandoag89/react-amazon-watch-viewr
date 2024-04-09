@@ -1,0 +1,16 @@
+.organism-watch-viewer {
+  width: 50rem;
+  height: 50rem;
+}
+
+.organism-watch-viewer__container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .organism-watch-viewer {
+    height: 30rem;
+  }
+}

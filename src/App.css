@@ -1,4 +1,23 @@
-.App {
+.app__control {
+  width: 50%;
+  padding: 1rem 0;
+}
+
+.app__container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width: 480px) {
+  .app__container {
+    flex-flow: column wrap;
+  }
+  .app__control {
+    width: 95%;
+    margin: auto;
+  }
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ProductData from './assets/mocks/product-data';
+import { MlcHeader } from './components/molecules/mlc-header/MlcHeader';
+import { OrganismControl } from './components/organisms/OrganismControl/OrganismControl';
+import { OrganismWatchViewer } from './components/organisms/OrganismWatchViewer/OrganismWatchViewer';
 
 function App() {
+
+  const [imageSelected, setImageSelected] = useState('');
+  const [selectAction, setSelectAction] = useState('');
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MlcHeader />
+      <div className='app__container'>
+        <div className='app__control'>
+          <OrganismWatchViewer
+            src={imageSelected}
+            alt={imageSelected}
+            radio={selectAction}/>
+        </div>
+        <div className='app__control'>
+          <OrganismControl 
+            textTemplate={{
+              title: ProductData.title,
+              paragraph: ProductData.description,
+              selectColor: 'Select Color',
+              features: 'Features',
+              time: 'Time',
+              heartRate: 'Heart Rate',
+              buyNow: 'Buy Now'
+            }}
+            watches={ProductData.colorOptions}
+            onSelectWatch={setImageSelected}
+            onActionRadio={setSelectAction}/>
+        </div>
+      </div>
+    </>
   );
 }
 

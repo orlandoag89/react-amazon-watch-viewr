@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --amazon-primary-color: #e47911;
+  --amazon-secondary-dark-color: #232f3e;
+  --amazon-secondary-color: #37475a;
+  --amazon-blue-light-color: #48a3c6;
+  --amazon-blue-strong-color: #007eb9;
+  --amazon-light-color: #fff;
+  --amazon-light-medium-color: #cccccc;
+  --amazon-dark-color: #111111;
+  --amazon-light-dark-color: #757575;
+  --amazon-heart-color: #ec0000;
+  --amazon-heart-dark-color: #450505;
+  --common-max-width: 480px;
+}
+
+label {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  padding: 0;
+  margin:  0;
+}
+
+@media screen and (max-width: 480px) { 
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}

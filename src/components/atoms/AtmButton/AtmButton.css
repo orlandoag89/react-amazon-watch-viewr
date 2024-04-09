@@ -1,0 +1,21 @@
+.atm-button {
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.atm-button--default {
+  background-color: var(--amazon-secondary-color);
+  color: var(--amazon-light-color);
+}
+
+.atm-button--primary {
+  background-color: var(--amazon-blue-strong-color);
+  color: var(--amazon-light-color);
+}
+
+.atm-button--secondary {
+  background-color: var(--amazon-light-dark-color);
+  color: var(--amazon-light-color);
+}

@@ -1,0 +1,20 @@
+.radio-button {
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--amazon-secondary-color);
+  color: var(--amazon-light-color);
+}
+
+.radio-button__container {
+  width: 30%;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked ~ .radio-button {
+  background-color: var(--amazon-secondary-dark-color);
+}

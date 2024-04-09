@@ -1,0 +1,28 @@
+/* Animación con keyframe llamada "latidos" */
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.1); }
+  to { transform: none; }
+}
+
+.heart__container {
+  position: absolute;
+  height: 30rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: end;
+}
+
+.heart {
+  display: inline-block;
+  font-size: 150px;
+  color: var(--amazon-heart-color);
+  animation: latidos .5s infinite;
+  transform-origin: center;
+}
+
+@media screen and (max-width: 480px) {
+  .heart__container {
+    height: 20rem;
+  }
+}

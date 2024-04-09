@@ -1,0 +1,25 @@
+.organism-control {
+  width: 10rem;
+  height: 10rem;
+}
+
+.organism-control__watches {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.organism-control__radio {
+  display: none;
+}
+
+.organism-control__radio:checked ~ label {
+  border: .25rem solid var(--amazon-blue-strong-color);
+}
+
+@media screen and (max-width: 480px) {
+  .organism-control__watches {
+    height: 7rem;
+  }
+}
